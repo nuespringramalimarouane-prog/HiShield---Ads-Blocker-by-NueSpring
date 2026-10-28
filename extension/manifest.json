@@ -61,8 +61,8 @@
     "default_title": "HiShield - Ads Blocker by NueSpring"
   },
   "icons": {
-    "16": "icons/hishield-logo.svg",
-    "48": "icons/hishield-logo.svg",
-    "128": "icons/hishield-logo.svg"
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
   }
 }
