@@ -1,0 +1,68 @@
+{
+  "manifest_version": 3,
+  "name": "HiShield - Ads Blocker by NueSpring",
+  "version": "1.2.0",
+  "description": "Blocks common ads and trackers across Chrome, with dedicated YouTube protection.",
+  "minimum_chrome_version": "111",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.youtube-nocookie.com/*"
+      ],
+      "js": [
+        "content/main-world.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/isolated.js"
+      ],
+      "css": [
+        "content/cosmetic.css"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "yt_rules",
+        "enabled": false,
+        "path": "rules/youtube_rules.json"
+      },
+      {
+        "id": "global_ads",
+        "enabled": false,
+        "path": "rules/global_ads.json"
+      }
+    ]
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "HiShield - Ads Blocker by NueSpring"
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

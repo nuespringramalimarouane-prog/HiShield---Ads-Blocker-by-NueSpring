@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HiShield - Ads Blocker by NueSpring</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><img class="brand-logo" src="../icons/hishield-logo.svg" alt=""><span class="brand-copy"><strong>HiShield</strong><small>Ads Blocker by NueSpring</small></span></div>
+      <span id="badge" class="badge">Loading…</span>
+    </header>
+
+    <section class="hero">
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> YOUR BROWSER, YOURS AGAIN</span>
+        <h1>Less noise.<br><em>More internet.</em></h1>
+        <p>HiShield is keeping your Chrome browsing clear.</p>
+      </div>
+      <div class="shield-art" aria-hidden="true"><span>✦</span></div>
+    </section>
+
+    <section class="protection panel">
+      <div class="protection-copy"><span class="section-kicker">PROTECTION</span><strong>Ad blocking</strong><small id="toggle-caption">Protection is on across Chrome</small></div>
+      <label class="toggle"><input id="toggle" type="checkbox" role="switch" aria-label="Turn ad blocking on or off"><span class="toggle-track"></span></label>
+    </section>
+
+    <section class="stats" aria-label="Ad blocking statistics">
+      <div class="stat-card"><span class="stat-icon">↗</span><span class="stat-value" id="today">0</span><span class="stat-label">YouTube events today</span></div>
+      <div class="stat-card"><span class="stat-icon">◎</span><span class="stat-value" id="total">0</span><span class="stat-label">YouTube events total</span></div>
+    </section>
+
+    <section class="free-card">
+      <div class="free-icon" aria-hidden="true">✓</div><div class="free-copy"><strong>Free protection</strong><small>No account or subscription needed.</small></div>
+    </section>
+
+    <p id="msg" class="msg" role="status" aria-live="polite"></p>
+    <footer><span class="privacy-dot"></span> Protection runs locally in Chrome</footer>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
