@@ -1,0 +1,11 @@
+# Chrome generates these indexed ruleset files when the unpacked extension is loaded.
+extension/_metadata/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Local editor and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db
